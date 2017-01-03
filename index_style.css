@@ -63,14 +63,25 @@ nav .active {
 }
 
 /* body element */
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
 .box {
 	padding-top: 110px;
 	padding-left: 50px;
-	height: 1000px;
+	height: 750px;
 }
 
 #home {
-	background-image: url("background.jpg");
+	background-color: #2d2d2d;
+	text-align: center;
+	color: white;
+}
+
+.image-circle {
+	height: 250px;
+	border-radius: 50%;
 }
 
 #programming-exp {
