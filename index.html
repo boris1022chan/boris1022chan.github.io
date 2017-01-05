@@ -9,9 +9,10 @@
 	<meta name="viewport" content="width=device-width, intial-scale=1.0">
 	<!-- CSS -->
 	<link rel="stylesheet" href="index_style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<!-- font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
+	<script src='index_javascript.js'></script>
 </head>
 <body id="home">
 	<!-- Navigation bar with anchor link -->
@@ -26,29 +27,72 @@
 		</div>
 		<div class="bottom-nav">
 			<ul>
-				<li><a href="#home">My Info</a></li>				
+				<li><a href="#my-info">My Info</a></li>				
 				<li><a href="#programming-exp">Programming Experience</a></li>
-				<li><a href="">Volunteer & Work Experience</a></li>
+				<li><a href="#volunteer-work-exp">Volunteer & Work Experience</a></li>
 			</ul>
+		</div>
+		<div class="mobile-nav">
+			<img class="menu-icon" src="menu-bar-icon.png">
+			<div class='mobile-nav-dropdown'>
+				<ul>				
+					<li><a href="index.html" class="active">About Me</a></li>
+					<li><a href="project.html">Projects</a></li>
+					<li><a href="">Contact</a></li>
+				</ul>				
+			</div>
 		</div>
 	</nav>
 
 	
-	<div id="home" class="box">
-		<table class="profile" style="width: 100%; padding-top: 50px" >
-			<th style="text-align: right; padding-right: 10px">
-				<img class="image-circle" src="profile-pic.jpg" alt="Boris Chan">
-			</th>
-			<th style="text-align: left; padding-left: 10px">
-				<h1 style="font-size: 50px"> Boris Chan </h1>
-				<p> unstoppable passion for computer science </p>
-			</th>
-		</table>		
+	<div id="my-info" class="body-box">
+		<h1> MY INFO</h1>
+		
 	</div>
 	
-	<div id="programming-exp" class="box">
-		<h1> kjkjkj </h1>
+	<div id="programming-exp" class="body-box">
+		<h1> PROGRAMMING EXPERIENCE </h1>
 	</div>
+
+	<div id="volunteer-work-exp" class="body-box">
+		<h1> VOLUNTEER & WORK EXPERIENCE </h1>
+	</div>
+
+	<footer>
+		<div  class="footer-box stay-connect">
+			<ul>
+				<li class="header"><h3>Stay Connected</h3></li>
+				<ul class="element">
+					<li><a href="https://www.facebook.com/little.guy.boris"> Facebook </a></li>
+					<li><a href="https://twitter.com/boris1022chan"> Twitter </a></li>
+					<li><a href="https://www.linkedin.com/in/boris1022chan/"> LinkedIn </a></li>
+					<li><a href="https://github.com/BossyBoris"> Github </a></li>
+				</ul>
+			</ul>
+		</div>
+		<div class="footer-box stay-connect">
+			<ul>
+				<li class="header"><h3>Stay Connected</h3></li>
+				<ul class="element">
+					<li>Facebook</li>
+					<li>Twitter</li>
+					<li>Linkein</li>
+					<li>Github</li>
+				</ul>
+			</ul>
+		</div>
+		<div class="footer-box stay-connect">
+			<ul>
+				<li class="header"><h3>Stay Connected</h3></li>
+				<ul class="element">
+					<li>Facebook</li>
+					<li>Twitter</li>
+					<li>Linkein</li>
+					<li>Github</li>
+				</ul>
+			</ul>
+		</div>
+	</footer>
 
 </body>
 </html>
