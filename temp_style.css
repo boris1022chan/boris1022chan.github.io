@@ -150,3 +150,7 @@ footer {
 	}
 }
 	
+
+a[id="c"]:target ~ #home div.body-box{
+	transform: translate(-500px);
+}
