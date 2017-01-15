@@ -131,10 +131,20 @@ footer {
 	padding-bottom: 20px;
 	margin-bottom: 0px;
 	text-align: center;
+
 }
 
 .social-media li:hover {
 	background-color: #254477;
+}
+
+.social-media li:hover .fa{
+	color: #fff;	
+	transform: rotate(40deg);
+}
+.social-media li .fa {
+	color: #333;
+	transition: color 0.4s, transform 0.4s ease-in-out;
 }
 
 /* Mobile or shrink screen Nav*/
@@ -150,7 +160,3 @@ footer {
 	}
 }
 	
-
-a[id="c"]:target ~ #home div.body-box{
-	transform: translate(-500px);
-}
