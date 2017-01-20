@@ -1,3 +1,6 @@
-# boris1022chan.github.io
-# borischan.me
-My web portfolio
+# My web portfolio
+
+find me on:
+boris1022chan.github.io
+borischan.me
+
