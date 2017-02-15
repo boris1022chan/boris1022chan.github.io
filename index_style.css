@@ -18,11 +18,9 @@ nav {
 	left: 0;
 	background-color: #EDE4E5;
 	border-bottom: 3px solid #C6C1C0;
-
 }
 
 nav h1 {
-	width: 25%;
 	margin: 10px 0;
 	padding-left: 2%;
 	overflow: hidden;
@@ -138,6 +136,14 @@ nav h1 {
 
 .dropdown .active {
 	color: 	#670000;
+}
+
+.social-media {
+	margin: 0 auto;
+}
+
+.change .dropdown {
+	height: 100vh;
 }
 
 .header {

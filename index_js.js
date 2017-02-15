@@ -10,14 +10,3 @@ function menuIcon(x) {
     }
 
 }
-
-$(document).ready(function(){
-	$('.x-navbar-fixed-top').css("background-color", "transparent");
-	$(window).scroll(function(){
-		if ($(this).scrollTop() > 100) {
-			$('.x-navbar-fixed-top').css("background-color", "rgba(255,255,255,0.6)").css("transition","0.3s ease-in-out ");
-		} else {
-			$('.x-navbar-fixed-top').css("background-color", "transparent").css("transition","0.3s ease-in-out ");
-		}
-	});
-});
