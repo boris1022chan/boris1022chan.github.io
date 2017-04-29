@@ -47,20 +47,37 @@ body{
 
 .sidepic {
     position: relative;
+    padding-left: 5%;
+    padding-right: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .project {
+    width: 100%;
     text-align: center;
 }
 
+.project_sep {
+    width: 0;
+    padding: 0;
+    margin: 2%;
+    border-left: 1px solid #94618E;
+}
+
 .projecttitle{
-    width: 100%;
+    height: 2.6em;
     text-align: center;
     font-size: 1.3em;
     font-weight: 500;
+    word-wrap: break-word;
+}
+
+.projectimage {
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 40%;
 }
 
 img {
@@ -93,6 +110,11 @@ a:hover {
         width: 100%;
         margin: 0px;
     }
+
+    .projectimage {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 }
 
 @media only screen and (max-width: 700px) {
@@ -112,6 +134,10 @@ a:hover {
 
     .project {
         width: 100%;
+    }
+
+    .project_sep {
+        display: none;
     }
 
     .project_row {
