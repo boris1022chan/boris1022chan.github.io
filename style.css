@@ -4,6 +4,37 @@ body{
     margin: 0;
 }
 
+.sidenav {
+    top: 50%;
+    right: 1%;
+    transform: translateY(-50%);
+    position: fixed;
+    z-index: 100;
+}
+
+.sidenav a {
+    text-decoration: none;
+    color: black;
+}
+
+.sidenav .item {
+    padding: 2px;
+}
+
+.sidenav ul li {
+    margin: 15px 5px;
+    list-style-type: none;
+    text-align: right;
+}
+
+.sidenav ul li:hover .show {
+    display: inline-block;
+}
+
+.sidenav ul li .show {
+    display: none;
+}
+
 #header {
     height: 100vh;
     position: relative;
@@ -55,11 +86,11 @@ body{
     align-items: center;
 }
 
-table {
+.skill {
     width: 100%;
 }
 
-td, th {
+.skill td, th {
     width: 50%;
     text-align: left;
     padding: 8px;
@@ -91,6 +122,16 @@ td, th {
     padding-right: 10%;
     -webkit-border-radius: 40%;
     border-radius: 40%;
+}
+
+.work {
+    width: 100%;
+}
+
+.work td, th {
+    width: 50%;
+    text-align: left;
+    padding: 8px;
 }
 
 .work_period {
@@ -126,6 +167,10 @@ img {
     .container {
         padding-left: 5%;
         padding-right: 5%;
+    }
+
+    .sidenav {
+        display: none;
     }
 
     body {
