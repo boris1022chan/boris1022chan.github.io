@@ -10,11 +10,12 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600" rel="stylesheet">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <title>Boris Chan</title>
 </head>
 <body>
-    <!--<div id="sidenav" class="sidenav">
+    <div id="sidenav" class="sidenav">
         <ul>
             <li>
                 <a href="#header">
@@ -53,7 +54,25 @@
                 </a>
             </li>
         </ul>
-    </div>-->
+    </div>
+
+    <script type="text/javascript">
+        // Select all links with hashes
+        $('a[href*="#"]')
+          .click(function(event) {
+              // Figure out element to scroll to
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+              // Does a scroll target exist?
+              if (target.length) {
+                // Only prevent default if animation is actually gonna happen
+                event.preventDefault();
+                $('html, body').animate({
+                  scrollTop: target.offset().top
+                }, 1000);
+              }
+          });
+    </script>
 
     <section id="header" class="container">
         <div style="width: 100%">
