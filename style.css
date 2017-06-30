@@ -17,7 +17,7 @@ body{
     color: black;
 }
 
-.sidenav .item {
+.sidenav .item .material-icons {
     padding: 2px;
 }
 
@@ -27,7 +27,7 @@ body{
     text-align: right;
 }
 
-.sidenav ul li:hover .show {
+.sidenav ul li a:hover:not(.active) .show {
     display: inline-block;
 }
 

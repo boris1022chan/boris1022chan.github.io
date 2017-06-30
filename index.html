@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css" href="framework.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600" rel="stylesheet">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src=“https://use.fontawesome.com/c8f3d09512.js“></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <title>Boris Chan</title>
@@ -20,37 +21,37 @@
             <li>
                 <a href="#header">
                     <span class="show">Home</span>
-                    <span class="item">o</span>
+                    <span class="item"><i class="fa fa-circle-o" aria-hidden="true"></i></span>
                 </a>
             </li>
             <li>
                 <a href="#about">
                     <span class="show">About Me</span>
-                    <span class="item">o</span>
+                    <span class="item"><i class="fa fa-circle-o" aria-hidden="true"></i></span>
                 </a>
             </li>
             <li>
                 <a href="#skills">
                     <span class="show">Skills</span>
-                    <span class="item">o</span>
+                    <span class="item"><i class="fa fa-circle-o" aria-hidden="true"></i></span>
                 </a>
             </li>
             <li>
                 <a href="#projects">
                     <span class="show">Projects</span>
-                    <span class="item">o</span>
+                    <span class="item"><i class="fa fa-circle-o" aria-hidden="true"></i></span>
                 </a>
             </li>
             <li>
                 <a href="#workexp">
                     <span class="show">Work Experience</span>
-                    <span class="item">o</span>
+                    <span class="item"><i class="fa fa-circle-o" aria-hidden="true"></i></span>
                 </a>
             </li>
             <li>
                 <a href="#contact">
                     <span class="show">Contact</span>
-                    <span class="item">o</span>
+                    <span class="item"><i class="fa fa-circle-o" aria-hidden="true"></i></span>
                 </a>
             </li>
         </ul>
@@ -70,6 +71,14 @@
                 $('html, body').animate({
                   scrollTop: target.offset().top
                 }, 1000);
+
+                $('a[href*="#"]').removeClass('active');
+                $('a[href*="#"]').children('.item').children('.fa').removeClass('fa-circle');
+                $('a[href*="#"]').children('.item').children('.fa').addClass('fa-circle-o');
+                // $('a[href*="#"]').children('.item').html("o");
+                $(this).addClass('active');
+                $(this).children('.item').children('.fa').removeClass('fa-circle-o');
+                $(this).children('.item').children('.fa').addClass('fa-circle');
               }
           });
     </script>
