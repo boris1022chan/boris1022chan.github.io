@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src=“https://use.fontawesome.com/c8f3d09512.js“></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <title>Boris Chan</title>
@@ -19,7 +18,7 @@
     <div id="sidenav" class="sidenav">
         <ul>
             <li>
-                <a href="#header" class="active">
+                <a href="#header">
                     <span class="show">Home</span>
                     <span class="item"><i class="fa fa-circle" aria-hidden="true"></i></span>
                 </a>
@@ -58,20 +57,49 @@
     </div>
 
     <script type="text/javascript">
-        // OnScroll active
-        // window.onscroll = function() {
-        //     $('a[href*="#"]').each(function () {
-        //         var currLink = $(this);
-        //         var refElement = $(currLink.attr("href"));
-        //         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-        //             $('a[href*="#"]').removeClass("active");
-        //             currLink.addClass("active");
-        //         }
-        //         else{
-        //             currLink.removeClass("active");
-        //         }
-        //     });
-        // };
+        //OnScroll active
+        window.onscroll = function() {
+            var winTop = $(window).scrollTop();
+            var winBottom = winTop + $(window).height();
+            var activeSection;
+            var mostOnScreen = 0;
+            $('section').each(function () {
+                var curSection = $(this);
+                var len = 0;
+                var curTop = curSection.position().top;
+                var curBottom = curTop + curSection.height();
+
+                if (curTop <= winTop && curBottom >= winTop) {
+                    len = curBottom - winTop;
+                }
+                else if (curTop >= winTop && curBottom <= winBottom) {
+                    len = curBottom - curTop;
+                }
+                else if (curTop <= winBottom && curBottom >= winBottom) {
+                    len = winBottom - curTop;
+                }
+                else if (curTop <= winTop && curBottom >= winBottom) {
+                    len = winBottom - winTop;
+                }
+
+                if (len/curSection.height() > mostOnScreen) {
+                    mostOnScreen = len/curSection.height();
+                    mostOnScreenSection = $(this).attr('id');
+                }
+            });
+
+            $("a[href^='#']").each(function() {
+                var temp = $(this).attr('href');
+                if (temp == "#" + mostOnScreenSection) {
+                    $(this).find('i').removeClass('fa-circle-o');
+                    $(this).find('i').addClass('fa-circle');
+                }
+                else {
+                    $(this).find('i').removeClass('fa-circle');
+                    $(this).find('i').addClass('fa-circle-o');
+                }
+            });
+        };
 
         // Smooth Scrolling
         $('a[href*="#"]').click(function(event) {
@@ -118,9 +146,10 @@
         <div class="row">
             <div class="col-4">
                 <h2 class="subheader">About Me</h2>
-                <p class="content">My name is Boris Chan, and I'm currently a 2nd year student majoring in Computer Science in University of Waterloo. I started programming in high school, with 2 years experience in C# programming with Visual Studio, I have completed many individual and team projects. I am also knowledgeable in C, Python, and Scheme. Through working with multiple personal projects and school assignments, I have a strong foundation in these languages. To expand my skillset, I have been self-learning HTML, CSS, and JavaScript through online tutorials.
-                <br /> <br />
-                Aside, I am active in many extra-curricular. During high school, I was the social media specialist of the music council. My job was to update social media such as Facebook and Twitter, and to maintain the music department website. I was also part of the orchestra, symphonic band, and eco-team. During my first year in university, I joined the dragon boat club and had a lot of fun meeting new people.
+                <p class="content">
+                    Hi, my name is Boris. I am currently a 2nd year computer science major student at University of Waterloo. I first started programming in high school and has done multiple projects with C#. As I entered University, I had explored many different languages such as Python and PHP. My first Co-op work term build up my knownledge in enterprise work flow, regression testing. In addition, I improved my web development skills, and learn Android development during the internship.
+                    <br /> <br />
+                    Aside, I am active in many extra-curricular. During high school, I was the social media specialist of the music council. My job was to update social media such as Facebook and Twitter, and to maintain the music department website. I was also part of the orchestra, symphonic band, and eco-team. During my first year in university, I joined the dragon boat club and had a lot of fun meeting new people.
                 </p>
             </div>
             <div class="col-2 sidepic">
