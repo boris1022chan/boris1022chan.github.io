@@ -139,7 +139,7 @@ body{
 }
 
 .work_description {
-    padding-bottom: 5%;
+    padding-bottom: 25px !important;
 }
 
 .social_media_links {
