@@ -6,8 +6,9 @@
     <meta name="author" content="John Doe">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="css/framework.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/framework.css"> -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -15,7 +16,7 @@
     <title>Boris Chan</title>
 </head>
 <body>
-    <div id="sidenav" class="sidenav">
+    <div id="sidenav" class="custom-sidenav">
         <ul>
             <li>
                 <a href="#header">
@@ -36,14 +37,14 @@
                 </a>
             </li>
             <li>
-                <a href="#projects">
-                    <span class="show">Projects</span>
+                <a href="#workexp">
+                    <span class="show">Work Experience</span>
                     <span class="item"><i class="fa fa-circle-o" aria-hidden="true"></i></span>
                 </a>
             </li>
             <li>
-                <a href="#workexp">
-                    <span class="show">Work Experience</span>
+                <a href="#projects">
+                    <span class="show">Projects</span>
                     <span class="item"><i class="fa fa-circle-o" aria-hidden="true"></i></span>
                 </a>
             </li>
@@ -125,7 +126,7 @@
         });
     </script>
 
-    <section id="header" class="container">
+    <section id="header">
         <div style="width: 100%">
             <div class="row">
                 <p class="subtitle">Welcome, This is</p>
@@ -144,26 +145,27 @@
 
     <section id="about" class="container">
         <div class="row">
-            <div class="col-4">
+            <div class="col s12">
                 <h2 class="subheader">About Me</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
                 <p class="content">
                     Hi, my name is Boris. I am currently a 2nd year computer science major student at University of Waterloo. I first started programming in high school and has done multiple projects with C#. As I entered University, I had explored many different languages such as Python and PHP. My first Co-op work term build up my knownledge in enterprise work flow, regression testing. In addition, I improved my web development skills, and learn Android development during the internship.
                     <br /> <br />
                     Aside, I am active in many extra-curricular. During high school, I was the social media specialist of the music council. My job was to update social media such as Facebook and Twitter, and to maintain the music department website. I was also part of the orchestra, symphonic band, and eco-team. During my first year in university, I joined the dragon boat club and had a lot of fun meeting new people.
                 </p>
             </div>
-            <div class="col-2 sidepic">
+            <!-- <div class="col s4">
                 <img src="./images/about_me_icon.png">
-            </div>
+            </div> -->
         </div>
     </section>
 
     <section id="skills" class="container">
-        <div class="row">
-            <div class="col-2 sidepic">
-                <img src="./images/code_skills_icon.png">
-            </div>
-            <div class="col-4">
+        <div class="row">            
+            <div class="col s12">
                 <h2 class="subheader">Skills</h2>
                 <table class="content skill">
                   <tr>
@@ -196,53 +198,20 @@
                   </tr>
                 </table>
             </div>
-        </div>
-    </section>
-
-    <section id="projects" class="container">
-        <div class="row">
-            <div class="col-6">
-                <h2 class="subheader">Projects</h2>
-            </div>
-        </div>
-        <div class="row project_row">
-            <!-- image size: 1300x 850 -->
-            <div class="col-2">
-                <div class="project">
-                    <h3 class="projecttitle">Linear Console Graphing Calculator</h3>
-                    <a href="https://github.com/boris1022chan/Linear-Graphing-Calculator">
-                        <img class=" projectimage" src="./images/linear_graphing_calculator.png" alt="image & github link">
-                    </a>
-                    <p class="content">Python - Dec 2016</p>
-                </div>
-            </div>
-            <div class="project_sep"></div>
-            <div class="col-2">
-                <div class="project">
-                    <h3 class="projecttitle">Obstacle Runner Game</h3>
-                    <a href="https://github.com/boris1022chan/Obstacle-Runner">
-                        <img class="projectimage" src="./images/obstacle_runner.png" alt="image & github link">
-                    </a>
-                    <p class="content">Python - Dec 2016</p>
-                </div>
-            </div>
-            <div class="project_sep"></div>
-            <div class="col-2">
-                <div class="project">
-                    <h3 class="projecttitle">Animals Sound Matching Game</h3>
-                    <a href="https://github.com/boris1022chan/Matching-Animal-Sound">
-                        <img class="projectimage" src="./images/animal_sound_game.png" alt="image & github link">
-                    </a>
-                    <p class="content">C# - Jun 2015</p>
-                </div>
-            </div>
+            <!-- <div class="col s4">
+                <img src="./images/code_skills_icon.png">
+            </div> -->
         </div>
     </section>
 
     <section id="workexp" class="container">
         <div class="row">
-            <div class="col-4">
+            <div class="col s12">
                 <h2 class="subheader">Work Experience</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
                 <table class="content work">
                     <tr>
                         <td valign="top">
@@ -306,20 +275,81 @@
                     </tr>
                 </table>
             </div>
-            <div class="col-2 sidepic">
+            <!-- <div class="col s4 sidepic">
                 <img src="./images/work_icon.png">
+            </div> -->
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <div class="row">
+            <div class="col s12">
+                <h2 class="subheader">Projects</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col l4 m6 s12">
+                <div class="card medium">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="./images/linear_graphing_calculator.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Linear Console Graphing Calculator</span>
+                        <p class="grey-text">Python</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://github.com/boris1022chan/Linear-Graphing-Calculator" target="_blank">
+                            Open in GitHub
+                            <i class="fa fa-external-link" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col l4 m6 s12">
+                <div class="card medium">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="./images/obstacle_runner.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Obstacle Runner Game</span>
+                        <p class="grey-text">Python</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://github.com/boris1022chan/Linear-Graphing-Calculator" target="_blank">
+                            Open in GitHub
+                            <i class="fa fa-external-link" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>  
+            </div>
+            <div class="col l4 m6 s12">
+                <div class="card medium">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="./images/animal_sound_game.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Animals Sound Matching Game</span>
+                        <p class="grey-text">C#</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://github.com/boris1022chan/Linear-Graphing-Calculator" target="_blank">
+                            Open in GitHub
+                            <i class="fa fa-external-link" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col s12">
                 <h2 class="subheader">Contact</h2>
             </div>
         </div>
         <div class="row">
-            <ul class="col-6 social_media_links">
+            <ul class="col s12 social_media_links">
                 <li><a href="https://www.facebook.com/little.guy.boris">Facebook</a></li>
                 <li><a href="https://twitter.com/boris1022chan">Twitter</a></li>
                 <li><a href="https://www.linkedin.com/in/boris1022chan/">LinkedIn</a></li>
