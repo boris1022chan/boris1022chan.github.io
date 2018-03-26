@@ -1,5 +1,5 @@
 body{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif !important;
     font-size:100%;
     margin: 0;
     overflow-x: hidden;
@@ -84,6 +84,11 @@ table {
     color: #49274A;
 }
 
+.subheader::first-letter {
+    font-weight: 600;
+    font-size: 2.1em;
+}
+
 .content {
     font-weight: 300;
 }
@@ -107,50 +112,40 @@ table {
     padding: 8px;
 }
 
-.project {
-    width: 100%;
-    text-align: center;
+.collection {
+    border: 0 !important;
 }
 
-.project_sep {
-    width: 0;
-    padding: 0;
-    margin: 2%;
-    border-left: 1px solid #94618E;
+.collection-item {
+    padding: 30px 0 30px 72px !important;
 }
 
-.projecttitle{
-    height: 2.6em;
-    text-align: center;
-    font-size: 1.3em;
-    font-weight: 500;
-    word-wrap: break-word;
+.company-image {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    overflow: hidden;
+    left: 15px;
+    vertical-align: middle;
 }
 
-.projectimage {
-    width: 100%;
-    padding-left: 10%;
-    padding-right: 10%;
-    -webkit-border-radius: 40%;
-    border-radius: 40%;
+.job-description {
+    margin-top: 10px !important;
 }
 
-.work {
-    width: 100%;
-}
-
-.work td, th {
-    width: 50%;
-    padding: 8px;
-}
-
-.work_period {
-    text-align: right;
-    padding-right: 5%;
-}
-
-.work_description {
-    padding-bottom: 25px !important;
+.card:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.05);
+    -ms-transition: all 200ms ease-is;
+    -ms-transform: scale(1.05);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.05);
+    transition: all 200ms ease-in;
+    transform: scale(1.05);
 }
 
 .social_media_links {
@@ -230,7 +225,7 @@ img {
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
     body {
         font-size:115%;
     }
@@ -242,5 +237,15 @@ img {
     .subtitle {
         font-size: 0.78em;
     }
-
+    
+    .subheader {
+        /* font-weight: 500; */
+        font-size: 1.8em;
+        color: #49274A;
+    }
+    
+    .subheader::first-letter {
+        font-weight: 600;
+        font-size: 1.9em;
+    }
 }
