@@ -10,9 +10,9 @@ table {
 }
 
 .container {
-    padding-top: 3%;
-    padding-bottom: 3%;
-    border-top: 1px solid #94618E;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    border-top: 1px solid #5789B6;
 }
 
 .custom-sidenav {
@@ -71,7 +71,7 @@ table {
 }
 
 .seperator {
-    margin: 5px !important  ;
+    margin: 5px !important;
 }
 
 .subtitle {
@@ -86,7 +86,7 @@ table {
 .subheader {
     font-weight: 500;
     font-size: 2em;
-    color: #49274A;
+    color: #5789B6;
 }
 
 .subheader::first-letter {
@@ -161,7 +161,7 @@ table {
 }
 
 .social_media_links a:hover {
-    color: #49274A;
+    color: #E27958;
 }
 
 img {
