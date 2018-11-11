@@ -28,6 +28,10 @@ table {
     color: black;
 }
 
+.fa-circle {
+    color: #E27958;
+}
+
 .custom-sidenav .item .material-icons {
     padding: 2px;
 }
