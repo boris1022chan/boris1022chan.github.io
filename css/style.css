@@ -25,11 +25,11 @@ table {
 
 .custom-sidenav a {
     text-decoration: none;
-    color: black;
+    color: #5789B6;
 }
 
 .fa-circle {
-    color: #E27958;
+    color: #5789B6;
 }
 
 .custom-sidenav .item .material-icons {
@@ -151,6 +151,11 @@ table {
     transition: all 200ms ease-in;
     transform: scale(1.05);
 }
+
+.card-action-text {
+    color: #E27958 !important;
+}
+
 .regular-pointer {
     cursor: auto !important;
 }
@@ -165,7 +170,7 @@ table {
 }
 
 .social_media_links a:hover {
-    color: #E27958;
+    color: #E27958 !important;
 }
 
 img {
