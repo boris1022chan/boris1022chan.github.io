@@ -15,6 +15,23 @@ table {
     border-top: 1px solid #5789B6;
 }
 
+.span-button-container {
+    text-align: center;
+    padding: 40px 0 30px 0px !important;
+}
+
+.span-button {
+    cursor: pointer;
+    color: #5789B6; 
+    padding: 10px 20px; 
+    border: 1px solid #5789B6;
+    user-select: none;
+}
+
+.span-button:hover {
+    box-shadow: 2px 2px #cccdce;
+}
+
 .custom-sidenav {
     top: 50%;
     right: 1%;
@@ -139,6 +156,10 @@ table {
     margin-top: 10px !important;
 }
 
+.work-exp-hidden {
+    display: none;
+}
+
 .card:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     z-index: 2;
@@ -253,7 +274,6 @@ img {
     .subheader {
         /* font-weight: 500; */
         font-size: 1.8em;
-        color: #49274A;
     }
     
     .subheader::first-letter {

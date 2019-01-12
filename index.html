@@ -129,6 +129,22 @@
                 $(this).children('.item').children('.fa').addClass('fa-circle');
             }
         });
+
+        function workExpToggleButton() {
+            var btn = document.getElementById("work-exp-toggle");
+            var elements = document.getElementsByClassName("work-exp-hidden");
+            var len = elements.length;
+            for (var i=0; i<len; i++) {
+                var e = elements[i];
+                if (!e.style.display || e.style.display == "none") {
+                    e.style.display = "block";
+                    btn.innerText = "Show Less";
+                } else {
+                    e.style.display = "none";
+                    btn.innerText = "Show More";
+                }
+            }
+        }
     </script>
 
     <section id="header">
@@ -270,7 +286,7 @@
                             At the end of the coop term, I was able to implement unit test cases in existing Android codebase.
                         </p>
                     </li>
-                    <li class="collection-item avatar">
+                    <li class="work-exp-hidden collection-item avatar">
                         <div class="company-image">
                             <img src="./images/rh_town_logo.png" alt="">
                         </div>
@@ -286,6 +302,9 @@
                             In order to improve their swimming skills, I taught with positive and encouraging manners, and provided constructive feedback thoughout the classes. 
                             I also communcated to parents about their children's progress so that they can have better understanding about their children swimming skills.
                         </p>
+                    </li>
+                    <li class="span-button-container">
+                        <span id="work-exp-toggle" class="span-button" onclick="workExpToggleButton()">Shore More</span>
                     </li>
                 </ul>
             </div>            
