@@ -5,10 +5,6 @@ body{
     overflow-x: hidden;
 }
 
-table {
-    border-collapse: unset !important;
-}
-
 .container {
     padding-top: 4%;
     padding-bottom: 4%;
@@ -45,10 +41,6 @@ table {
     color: #5789B6;
 }
 
-.fa-circle {
-    color: #5789B6;
-}
-
 .custom-sidenav .item .material-icons {
     padding: 2px;
 }
@@ -82,23 +74,8 @@ table {
 }
 
 .title {
-    width: 100%;
-    text-align: center;
     margin: 0;
     font-size: 5em;
-    font-weight: 600;
-}
-
-.seperator {
-    margin: 5px !important;
-}
-
-.subtitle {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    font-size: 1.3em;
     font-weight: 600;
 }
 
@@ -119,17 +96,6 @@ table {
 
 #about {
     border-top: 0;
-}
-
-.skill {
-    width: 80%;
-    margin-bottom: 15px;
-}
-
-.skill td, th {
-    width: 50%;
-    text-align: left;
-    padding: 8px;
 }
 
 .collection {
