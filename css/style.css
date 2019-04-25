@@ -70,13 +70,11 @@ table {
 #header {
     width: 100%;
     height: 100vh;
-    position: relative;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-
-    background-color: #FAFAFA;
+    justify-content: center;
+    background-color: #eaeaea;
 }
 
 .header-row {

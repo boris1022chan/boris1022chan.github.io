@@ -8,11 +8,11 @@
 
     <!-- styling -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/textAnimation.css">
+    <link rel="stylesheet" type="text/css" href="css/animation.css">
 
     <!-- script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -26,37 +26,31 @@
             <li>
                 <a href="#header">
                     <span class="show">Home</span>
-                    <span class="item"><i class="fa fa-circle" aria-hidden="true"></i></span>
+                    <span class="item"><i class="fas fa-circle" aria-hidden="true"></i></span>
                 </a>
             </li>
             <li>
                 <a href="#about">
                     <span class="show">About Me</span>
-                    <span class="item"><i class="fa fa-circle-o" aria-hidden="true"></i></span>
-                </a>
-            </li>
-            <li>
-                <a href="#skills">
-                    <span class="show">Skills</span>
-                    <span class="item"><i class="fa fa-circle-o" aria-hidden="true"></i></span>
+                    <span class="item"><i class="far fa-circle" aria-hidden="true"></i></span>
                 </a>
             </li>
             <li>
                 <a href="#workexp">
                     <span class="show">Work Experience</span>
-                    <span class="item"><i class="fa fa-circle-o" aria-hidden="true"></i></span>
+                    <span class="item"><i class="far fa-circle" aria-hidden="true"></i></span>
                 </a>
             </li>
             <li>
                 <a href="#projects">
                     <span class="show">Projects</span>
-                    <span class="item"><i class="fa fa-circle-o" aria-hidden="true"></i></span>
+                    <span class="item"><i class="far fa-circle" aria-hidden="true"></i></span>
                 </a>
             </li>
             <li>
                 <a href="#contact">
                     <span class="show">Contact</span>
-                    <span class="item"><i class="fa fa-circle-o" aria-hidden="true"></i></span>
+                    <span class="item"><i class="far fa-circle" aria-hidden="true"></i></span>
                 </a>
             </li>
         </ul>
@@ -97,12 +91,12 @@
             $("a[href^='#']").each(function() {
                 var temp = $(this).attr('href');
                 if (temp == "#" + mostOnScreenSection) {
-                    $(this).find('i').removeClass('fa-circle-o');
-                    $(this).find('i').addClass('fa-circle');
+                    $(this).find('i').removeClass('far');
+                    $(this).find('i').addClass('fas');
                 }
                 else {
-                    $(this).find('i').removeClass('fa-circle');
-                    $(this).find('i').addClass('fa-circle-o');
+                    $(this).find('i').removeClass('fas');
+                    $(this).find('i').addClass('far');
                 }
             });
         };
@@ -149,18 +143,21 @@
 
     <section id="header">
         <div class="header-row row">
-            <h1 class="title">Boris Chan</h1>
-            <div class="content2">
-                <div class="content2__container">
-                    <p class="content2__container__text">Hello</p>
-                    <ul class="content2__container__list">
-                        <li class="content2__container__list__item">Developer</li>
-                        <li class="content2__container__list__item">Innovator</li>
-                        <li class="content2__container__list__item">Creator</li>
-                        <li class="content2__container__list__item">Designer</li>
+            <h1 class="title">BORIS CHAN</h1>
+            <div class="textanimate">
+                <div class="textanimate__container">
+                    <p class="textanimate__container__text">I am a</p>
+                    <ul class="textanimate__container__list">
+                        <li class="textanimate__container__list__item">Developer</li>
+                        <li class="textanimate__container__list__item">Innovator</li>
+                        <li class="textanimate__container__list__item">Creator</li>
                     </ul>
                 </div>
             </div>
+        </div>
+        <div class="header-direction">
+            <span>Scroll down</span>
+            <i class="fas fa-angle-down fa-2x"></i>
         </div>
     </section>
 
@@ -188,79 +185,6 @@
             </div>
             <!-- <div class="col s4">
                 <img src="./images/about_me_icon.png">
-            </div> -->
-        </div>
-    </section>
-
-    <section id="skills" class="container">
-        <div class="row">            
-            <div class="col s12">
-                <h2 class="subheader">Skills</h2>
-                <table class="content skill">
-                    <tr>
-                        <th>Mobile Development</th>
-                        <th>Frameworks / Libraries</th>
-                    </tr>
-                    <tr>
-                        <td>Kotlin</td>
-                        <td>Android</td>
-                    </tr>
-                    <tr>
-                        <td>Dart</td>
-                        <td>RxJava, RxAndroid</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Dagger2</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Flutter</td>
-                    </tr>
-                </table>
-                <table class="content skill">
-                    <tr>
-                      <th>Frontend Development</th>
-                      <th>Frameworks / Libraries</th>
-                    </tr>
-                    <tr>
-                      <td>HTML, CSS, Javascript</td>
-                      <td>React</td>
-                    </tr>
-                    <tr>
-                      <td>TypeScript</td>
-                      <td>Redux</td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td>Yup.js</td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td>Bootstrap, Materialize</td>
-                    </tr>
-                  </table>
-                  <table class="content skill">
-                    <tr>
-                      <th>Others</th>
-                      <th></th>
-                    </tr>
-                    <tr>
-                      <td>C++. C#, C</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>Scheme</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>Python</td>
-                      <td></td>
-                    </tr>
-                  </table>
-            </div>
-            <!-- <div class="col s4">
-                <img src="./images/code_skills_icon.png">
             </div> -->
         </div>
     </section>
@@ -335,10 +259,7 @@
                         <span id="work-exp-toggle" class="span-button" onclick="workExpToggleButton()">Shore More</span>
                     </li>
                 </ul>
-            </div>            
-            <!-- <div class="col s4 sidepic">
-                <img src="./images/work_icon.png">
-            </div> -->
+            </div>      
         </div>
     </section>
 
@@ -374,12 +295,6 @@
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4 regular-pointer">Genscirbe</span>
                         <p class="grey-text content">Javascript, Python</p>
-                    </div>
-                    <div class="card-action">
-                        <a class="card-action-text" href="https://github.com/boris1022chan/Genscribe" target="_blank">
-                            Open in GitHub
-                            <i class="fa fa-external-link" aria-hidden="true"></i>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -464,8 +379,6 @@
         </div>
         <div class="row">
             <ul class="col s12 social_media_links">
-                <li><a href="https://www.facebook.com/little.guy.boris">Facebook</a></li>
-                <li><a href="https://twitter.com/boris1022chan">Twitter</a></li>
                 <li><a href="https://www.linkedin.com/in/boris1022chan/">LinkedIn</a></li>
                 <li><a href="https://github.com/boris1022chan">Github</a></li>
                 <li>Email: <a href="mailto:boris1022chan@gmail.com" target="_top">boris1022chan@gmail.com</a></li>
