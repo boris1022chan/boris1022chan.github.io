@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=11" />
@@ -7,10 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- styling -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/animation.css">
 
@@ -20,371 +20,38 @@
     <link rel="icon" href="images/tab_icon.png">
     <title>Boris Chan</title>
 </head>
+
 <body>
-    <div id="sidenav" class="custom-sidenav">
-        <ul>
-            <li>
-                <a href="#header">
-                    <span class="show">Home</span>
-                    <span class="item"><i class="fas fa-circle" aria-hidden="true"></i></span>
-                </a>
-            </li>
-            <li>
-                <a href="#about">
-                    <span class="show">About Me</span>
-                    <span class="item"><i class="far fa-circle" aria-hidden="true"></i></span>
-                </a>
-            </li>
-            <li>
-                <a href="#workexp">
-                    <span class="show">Work Experience</span>
-                    <span class="item"><i class="far fa-circle" aria-hidden="true"></i></span>
-                </a>
-            </li>
-            <li>
-                <a href="#projects">
-                    <span class="show">Projects</span>
-                    <span class="item"><i class="far fa-circle" aria-hidden="true"></i></span>
-                </a>
-            </li>
-            <li>
-                <a href="#contact">
-                    <span class="show">Contact</span>
-                    <span class="item"><i class="far fa-circle" aria-hidden="true"></i></span>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <script type="text/javascript">
-        //OnScroll active
-        window.onscroll = function() {
-            var winTop = $(window).scrollTop();
-            var winBottom = winTop + $(window).height();
-            var activeSection;
-            var mostOnScreen = 0;
-            $('section').each(function () {
-                var curSection = $(this);
-                var len = 0;
-                var curTop = curSection.position().top;
-                var curBottom = curTop + curSection.height();
-
-                if (curTop <= winTop && curBottom >= winTop) {
-                    len = curBottom - winTop;
-                }
-                else if (curTop >= winTop && curBottom <= winBottom) {
-                    len = curBottom - curTop;
-                }
-                else if (curTop <= winBottom && curBottom >= winBottom) {
-                    len = winBottom - curTop;
-                }
-                else if (curTop <= winTop && curBottom >= winBottom) {
-                    len = winBottom - winTop;
-                }
-
-                if (len/curSection.height() > mostOnScreen) {
-                    mostOnScreen = len/curSection.height();
-                    mostOnScreenSection = $(this).attr('id');
-                }
-            });
-
-            $("a[href^='#']").each(function() {
-                var temp = $(this).attr('href');
-                if (temp == "#" + mostOnScreenSection) {
-                    $(this).find('i').removeClass('far');
-                    $(this).find('i').addClass('fas');
-                }
-                else {
-                    $(this).find('i').removeClass('fas');
-                    $(this).find('i').addClass('far');
-                }
-            });
-        };
-
-        // Smooth Scrolling
-        $('a[href*="#"]').click(function(event) {
-            // Figure out element to scroll to
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-             // Does a scroll target exist?
-            if (target.length) {
-                // Only prevent default if animation is actually gonna happen
-                event.preventDefault();
-                $('html, body').animate({
-                  scrollTop: target.offset().top
-                }, 1000);
-
-                $('a[href*="#"]').removeClass('active');
-                $('a[href*="#"]').children('.item').children('.fa').removeClass('fa-circle');
-                $('a[href*="#"]').children('.item').children('.fa').addClass('fa-circle-o');
-                // $('a[href*="#"]').children('.item').html("o");
-                $(this).addClass('active');
-                $(this).children('.item').children('.fa').removeClass('fa-circle-o');
-                $(this).children('.item').children('.fa').addClass('fa-circle');
-            }
-        });
-
-        function workExpToggleButton() {
-            var btn = document.getElementById("work-exp-toggle");
-            var elements = document.getElementsByClassName("work-exp-hidden");
-            var len = elements.length;
-            for (var i=0; i<len; i++) {
-                var e = elements[i];
-                if (!e.style.display || e.style.display == "none") {
-                    e.style.display = "block";
-                    btn.innerText = "Show Less";
-                } else {
-                    e.style.display = "none";
-                    btn.innerText = "Show More";
-                }
-            }
-        }
-    </script>
-
     <section id="header">
-        <div class="header-row row">
-            <h1 class="title">BORIS CHAN</h1>
-            <div class="textanimate">
-                <div class="textanimate__container">
-                    <p class="textanimate__container__text">I am a</p>
-                    <ul class="textanimate__container__list">
-                        <li class="textanimate__container__list__item">Developer</li>
-                        <li class="textanimate__container__list__item">Innovator</li>
-                        <li class="textanimate__container__list__item">Creator</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="header-direction">
-            <span>Scroll down</span>
-            <i class="fas fa-angle-down fa-2x"></i>
-        </div>
-    </section>
-
-    <section id="about" class="container">
-        <div class="row">
-            <div class="col s12">
-                <h2 class="subheader">About Me</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12">
-                <p class="content">
-                    Hi, my name is Boris. I am a self-motivated, passionate programmer. 
-                    I am currently a 3rd year computer science major student at University of Waterloo. 
-                    I enjoy taking up challenges and creating new things and coding allows me to do both. 
-                    As I enter university, I started to learn different aspect of programming. 
-                    I started to learn web development through online resources and created multiple versions of my portofolio, 
-                    of course the one you are seeing right now is the best one so far. 
-                    I am currently interested in web and mobile developments.
-                    <br /> <br />
-                    I have experience working in both a startup company and a global-scale company. 
-                    The two similar yet different experience allows me to grow and become more aware about enterprise production and software development cycle.
-                    I hope to experience many more interesting aspects of software development during the upcoming coop terms. 
-                </p>
-            </div>
-            <!-- <div class="col s4">
-                <img src="./images/about_me_icon.png">
-            </div> -->
-        </div>
-    </section>
-
-    <section id="workexp" class="container">
-        <div class="row">
-            <div class="col s12">
-                <h2 class="subheader">Work Experience</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12">
-                <ul class="collection">
-                    <li class="collection-item avatar">
-                        <div class="company-image">
-                            <img src="./images/bbm_logo.jpg" alt="">
-                        </div>
-                        <span class="title">Software Developer Coop</span>
-                        <p class="content">CMW Social Networking Ltd</p>
-                        <p class="content">Sep 2018 - Dec 2018</p>
-                        <p class="job-description content">
-                            I am responsible for delivering new features and stabilizing the Android application.
-                            I have refactored code with clean architecture for better modularity, maintainability, and testability.
-                            I have also re-implemented phonebook changes dectection algorithm to support older API version and improve performance by over 100%.
-                        </p>
-                    </li>
-                    <li class="collection-item avatar">
-                        <div class="company-image">
-                            <img src="./images/genesys_logo.png" alt="">
-                        </div>
-                        <span class="title">Web UI Developer</span>
-                        <p class="content">Genesys Laboratories Canada Inc.</p>
-                        <p class="content">Jan 2018 - Apr 2018</p>
-                        <p class="job-description content">
-                            I contributed to development of 3 key epics in rewriting the exisiting application in React and Redux. 
-                            I had also refactored over 100 components from the reuseable components library to allow better customizability. 
-                            I was activily participated in agile process involvement meetings and retrospectives, and suggested potential solutions to imporve the existing process. 
-                            Moreover, I helped another React team to reduce the production build size of the prototype application by 10 times with Webpack. 
-                        </p>
-                    </li>
-                    <li class="collection-item avatar">
-                        <div class="company-image">
-                            <img src="./images/acto_logo.png" alt="">
-                        </div>
-                        <span class="title">Quality Assurance / Quality Control Developer</span>
-                        <p class="content">Action Pack Media Inc.</p>
-                        <p class="content">Jun 2017 - Sep 2017</p>
-                        <p class="job-description content">
-                            I closely worked with web, Android, and iOS developers and had successfully eliminated more than 85% of bugs and UI issues. 
-                            I have also learn more about web developement and Android through online resources in order to better understand the ACTO app. 
-                            At the end of the coop term, I was able to implement unit test cases in existing Android codebase.
-                        </p>
-                    </li>
-                    <li class="work-exp-hidden collection-item avatar">
-                        <div class="company-image">
-                            <img src="./images/rh_town_logo.png" alt="">
-                        </div>
-                        <span class="title">Lifeguard & Swim Instructor</span>
-                        <p class="content">Town of Richmond Hill</p>
-                        <p class="content">Nov 2015 - Aug 2016</p>
-                        <p class="job-description content">
-                            As a lifeguard, I responded to any emergencies or patron's concerns. 
-                            I had treated serveral minor injuries, as well as saved some drowning victims. 
-                            In order to provide a safe aquatic environment, I cooperated with fellow lifeguards and pool supversiors to ensure swimmers safety.
-                            <br><br>
-                            As a swim instructor, I created detailed and organized lesson schedules based on specific swimmers' needs. 
-                            In order to improve their swimming skills, I taught with positive and encouraging manners, and provided constructive feedback thoughout the classes. 
-                            I also communcated to parents about their children's progress so that they can have better understanding about their children swimming skills.
-                        </p>
-                    </li>
-                    <li class="span-button-container">
-                        <span id="work-exp-toggle" class="span-button" onclick="workExpToggleButton()">Shore More</span>
-                    </li>
-                </ul>
-            </div>      
-        </div>
-    </section>
-
-    <section id="projects" class="container">
-        <div class="row">
-            <div class="col s12">
-                <h2 class="subheader">Projects</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col l4 m6 s12">
-                <div class="card medium">
-                    <div class="card-image waves-effect waves-block waves-light regular-pointer">
-                        <img class="activator" src="./images/music_downloader.PNG">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4 regular-pointer">Music Downloader</span>
-                        <p class="grey-text content">Android, Kotlin</p>
-                    </div>
-                    <div class="card-action">
-                        <a class="card-action-text" href="https://github.com/boris1022chan/MusicDownloader" target="_blank">
-                            Open in GitHub
-                            <i class="fa fa-external-link" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col l4 m6 s12">
-                <div class="card medium">
-                    <div class="card-image waves-effect waves-block waves-light regular-pointer">
-                        <img class="activator" src="./images/genscribe.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4 regular-pointer">Genscirbe</span>
-                        <p class="grey-text content">Javascript, Python</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col l4 m6 s12">
-                <div class="card medium">
-                    <div class="card-image waves-effect waves-block waves-light regular-pointer">
-                        <img class="activator" src="./images/quadris.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4 regular-pointer">Quadris</span>
-                        <p class="grey-text content">C++</p>
-                    </div>
-                    <!-- <div class="card-action">
-                            <a href="https://github.com/boris1022chan/Linear-Graphing-Calculator" target="_blank">
-                                Open in GitHub
-                                <i class="fa fa-external-link" aria-hidden="true"></i>
-                            </a>
-                        </div> -->
-                </div>
-            </div>
-            <div class="col l4 m6 s12">
-                <div class="card medium">
-                    <div class="card-image waves-effect waves-block waves-light regular-pointer">
-                        <img class="activator" src="./images/linear_graphing_calculator.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4 regular-pointer">Linear Console Graphing
-                            Calculator</span>
-                        <p class="grey-text content">Python</p>
-                    </div>
-                    <div class="card-action">
-                        <a class="card-action-text" href="https://github.com/boris1022chan/Linear-Graphing-Calculator" target="_blank">
-                            Open in GitHub
-                            <i class="fa fa-external-link" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col l4 m6 s12">
-                <div class="card medium">
-                    <div class="card-image waves-effect waves-block waves-light regular-pointer">
-                        <img class="activator" src="./images/obstacle_runner.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4 regular-pointer">Obstacle Runner Game</span>
-                        <p class="grey-text content">Python</p>
-                    </div>
-                    <div class="card-action">
-                        <a class="card-action-text" href="https://github.com/boris1022chan/Obstacle-Runner" target="_blank">
-                            Open in GitHub
-                            <i class="fa fa-external-link" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col l4 m6 s12">
-                <div class="card medium">
-                    <div class="card-image waves-effect waves-block waves-light regular-pointer">
-                        <img class="activator" src="./images/animal_sound_game.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4 regular-pointer">Animals Sound Matching
-                            Game</span>
-                        <p class="grey-text content">C#</p>
-                    </div>
-                    <div class="card-action">
-                        <a class="card-action-text" href="https://github.com/boris1022chan/Matching-Animal-Sound" target="_blank">
-                            Open in GitHub
-                            <i class="fa fa-external-link" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="container">
-        <div class="row">
-            <div class="col s12">
-                <h2 class="subheader">Contact</h2>
-            </div>
-        </div>
-        <div class="row">
-            <ul class="col s12 social_media_links">
-                <li><a href="https://www.linkedin.com/in/boris1022chan/">LinkedIn</a></li>
-                <li><a href="https://github.com/boris1022chan">Github</a></li>
-                <li>Email: <a href="mailto:boris1022chan@gmail.com" target="_top">boris1022chan@gmail.com</a></li>
+        <div class="header-bar">
+            <img src="images/logo.png" id="name-logo">
+            <ul id="nav-list" class="mobile-hidden">
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </section>
 
+    <section id="about" class="container">
+        <h3 class="content">About</h3>
+    </section>
+
+    <section id="work" class="container">
+        <h3 class="content">Work</h3>
+    </section>
+
+    <section id="projects" class="container">
+        <h3 class="content">Project</h3>
+    </section>
+
+    <section id="contact" class="container">
+        <h3 class="content">Contact</h3>
+    </section>
+
+    <section id="footer"></section>
+
 </body>
+
 </html>

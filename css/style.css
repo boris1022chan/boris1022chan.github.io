@@ -1,249 +1,66 @@
-body{
-    font-family: 'Montserrat', sans-serif !important;
-    font-size:100%;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     margin: 0;
-    overflow-x: hidden;
-}
-
-.container {
-    padding-top: 4%;
-    padding-bottom: 4%;
-    border-top: 1px solid #5789B6;
-}
-
-.span-button-container {
-    text-align: center;
-    padding: 40px 0 30px 0px !important;
-}
-
-.span-button {
-    cursor: pointer;
-    color: #5789B6; 
-    padding: 10px 20px; 
-    border: 1px solid #5789B6;
-    user-select: none;
-}
-
-.span-button:hover {
-    box-shadow: 2px 2px #cccdce;
-}
-
-.custom-sidenav {
-    top: 50%;
-    right: 1%;
-    transform: translateY(-50%);
-    position: fixed;
-    z-index: 100;
-}
-
-.custom-sidenav a {
-    text-decoration: none;
-    color: #5789B6;
-}
-
-.custom-sidenav .item .material-icons {
-    padding: 2px;
-}
-
-.custom-sidenav ul li {
-    margin: 15px 5px;
-    list-style-type: none;
-    text-align: right;
-}
-
-.custom-sidenav ul li a:hover:not(.active) .show {
-    display: inline-block;
-}
-
-.custom-sidenav ul li .show {
-    display: none;
+    background-color: #010412;
 }
 
 #header {
     width: 100%;
     height: 100vh;
+    background-image: url("../images/sunset-fade-min.jpeg");
+    background-position: center bottom;
+    background-size: cover;
+}
+
+.header-bar {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #eaeaea;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
 }
 
-.header-row {
-    margin-top: 100px;
+#name-logo {
+    margin: 30px 80px;
 }
 
-.title {
-    margin: 0;
-    font-size: 5em;
-    font-weight: 600;
-    text-align: center;
+#nav-list {
+    list-style: none;
+    margin: 70px 100px 0 0;
 }
 
-.subheader {
-    font-weight: 500;
-    font-size: 2em;
-    color: #5789B6;
+#nav-list li {
+    display: inline;
+    margin: 0 10px;
 }
 
-.subheader::first-letter {
-    font-weight: 600;
-    font-size: 2.1em;
+.container {
+    height: 500px;
 }
 
 .content {
-    font-weight: 300;
+    color: #B06353;
 }
 
-#about {
-    border-top: 0;
-}
-
-.collection {
-    border: 0 !important;
-}
-
-.collection-item {
-    padding: 30px 0 30px 72px !important;
-}
-
-.company-image {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    width: 42px;
-    height: 42px;
-    overflow: hidden;
-    left: 15px;
-    vertical-align: middle;
-}
-
-.job-description {
-    margin-top: 10px !important;
-}
-
-.work-exp-hidden {
-    display: none;
-}
-
-.card:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    z-index: 2;
-    -webkit-transition: all 200ms ease-in;
-    -webkit-transform: scale(1.05);
-    -ms-transition: all 200ms ease-is;
-    -ms-transform: scale(1.05);   
-    -moz-transition: all 200ms ease-in;
-    -moz-transform: scale(1.05);
-    transition: all 200ms ease-in;
-    transform: scale(1.05);
-}
-
-.card-action-text {
-    color: #E27958 !important;
-}
-
-.regular-pointer {
-    cursor: auto !important;
-}
-
-.social_media_links {
-    list-style: none;
-}
-
-.social_media_links a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.social_media_links a:hover {
-    color: #E27958 !important;
-}
-
-img {
-    max-width: 100%;
-    max-height: 100%;
+#footer {
     width: 100%;
-    height: auto;
+    height: 200px;
+    background-color: #121321;
 }
 
-@media only screen and (max-width: 995px) {
-    .container {
-        padding-left: 5%;
-        padding-right: 5%;
+@media only screen and (max-width: 500px) {
+    .mobile-hidden {
+        display: none !important;
     }
 
-    .custom-sidenav {
-        display: none;
+    .header-bar {
+        justify-content: center
     }
 
-    body {
-        font-size:115%;
-    }
-
-    .row {
-        width: 100%;
-        margin: 0px;
-    }
-
-    .projectimage {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-
-    .sidepic {
-        width: 0px;
-        display: none;
-    }
-
-    .col-4 {
-        width: 100%;
-    }
-
-    .col-2 {
-        width: 100%;
-    }
-
-    .project {
-        width: 100%;
-    }
-
-    .projectimage {
-        width: 60%;
-    }
-
-    .project_sep {
-        display: none;
-    }
-
-    .project_row {
-        display: block;
-    }
-}
-
-@media only screen and (max-width: 450px) {
-    body {
-        font-size:115%;
-    }
-
-    .title {
-        font-size: 3em;
-    }
-
-    .subtitle {
-        font-size: 0.78em;
+    #name-logo {
+        margin: 30px 0;
     }
     
-    .subheader {
-        /* font-weight: 500; */
-        font-size: 1.8em;
-    }
-    
-    .subheader::first-letter {
-        font-weight: 600;
-        font-size: 1.9em;
-    }
-}
+  }
