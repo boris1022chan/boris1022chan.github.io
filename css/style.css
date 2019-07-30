@@ -1,18 +1,77 @@
+:root {
+    --header-bg-dark: url("../images/sunset-fade-min.jpeg");
+    --header-bg-light: url("../images/sunrise-min.jpg");
+    --bg-color-dark: #010412;
+    --bg-color-light: #ffffff;
+    --ft-color-dark: #121321;
+    --ft-color-light: #F7F4EF;
+    --text-color-dark: #AFAFAF;
+    --text-color-light: #010412;
+    --primary-color: #B06353;
+    --mode-transition-duration: 500ms;
+
+    --color-mode: 'light';
+    --header-bg: var(--header-bg-light);
+    --bg-color: var(--bg-color-light);
+    --ft-color: var(--ft-color-light);
+    --text-color: var(--text-color-light);
+    --display-light: block;
+    --display-dark: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-mode: 'dark';
+    }
+
+    :root:not([data-user-color-scheme]) {
+        --header-bg: var(--header-bg-dark);
+        --bg-color: var(--bg-color-dark);
+        --ft-color: var(--ft-color-dark);
+        --text-color: var(--text-color-dark);
+        --display-light: none;
+        --display-dark: block;
+    }
+}
+
+[data-user-color-scheme='dark'] {
+    --header-bg: var(--header-bg-dark);
+    --bg-color: var(--bg-color-dark);
+    --ft-color: var(--ft-color-dark);
+    --text-color: var(--text-color-dark);
+    --display-light: none;
+    --display-dark: block;
+}
+
+.dark {
+    display: var(--display-dark) !important;
+}
+
+.light {
+    display: var(--display-light) !important;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
-    background-color: #010412;
+    background-color: var(--bg-color);
+
+    -webkit-transition: background-color 500ms ease; 
+    transition: background-color 500ms ease; 
 }
 
 #header {
     width: 100%;
     height: 100vh;
-    background-image: url("../images/sunset-fade-min.jpeg");
+    background-image: var(--header-bg);
     background-position: center bottom;
     background-size: cover;
+
+    -webkit-transition: background-image 500ms ease; 
+    transition: background-image 500ms ease; 
 }
 
 .header-bar {
@@ -36,18 +95,33 @@ body {
     margin: 0 10px;
 }
 
+#nav-list li a {
+    color: var(--text-color);
+}
+
+#nav-list li a:hover {
+    color: var(--primary-color);
+}
+
 .container {
-    height: 500px;
+    max-width: 800px;
+    padding-top: 70px;
+    padding-bottom: 10px;
+    color: var(--text-color)
 }
 
 .content {
-    color: #B06353;
+    color: var(--primary-color);
 }
 
 #footer {
     width: 100%;
     height: 200px;
-    background-color: #121321;
+    margin-top: 70px;
+    background-color: var(--ft-color);
+
+    -webkit-transition: background-color 500ms ease; 
+    transition: background-color 500ms ease; 
 }
 
 @media only screen and (max-width: 500px) {
@@ -63,4 +137,4 @@ body {
         margin: 30px 0;
     }
     
-  }
+}
