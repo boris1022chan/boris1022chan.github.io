@@ -8,6 +8,8 @@
     --text-color-dark: #AFAFAF;
     --text-color-light: #010412;
     --primary-color: #B06353;
+    --toggle-on: 1;
+    --toggle-off: 0.3;
     --mode-transition-duration: 500ms;
 
     --color-mode: 'light';
@@ -15,8 +17,8 @@
     --bg-color: var(--bg-color-light);
     --ft-color: var(--ft-color-light);
     --text-color: var(--text-color-light);
-    --display-light: block;
-    --display-dark: none;
+    --toggle-light: var(--toggle-off);
+    --toggle-dark: var(--toggle-on);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,8 +31,8 @@
         --bg-color: var(--bg-color-dark);
         --ft-color: var(--ft-color-dark);
         --text-color: var(--text-color-dark);
-        --display-light: none;
-        --display-dark: block;
+        --toggle-light: var(--toggle-on);
+        --toggle-dark: var(--toggle-off)
     }
 }
 
@@ -39,16 +41,8 @@
     --bg-color: var(--bg-color-dark);
     --ft-color: var(--ft-color-dark);
     --text-color: var(--text-color-dark);
-    --display-light: none;
-    --display-dark: block;
-}
-
-.dark {
-    display: var(--display-dark) !important;
-}
-
-.light {
-    display: var(--display-light) !important;
+    --toggle-light: var(--toggle-on);
+    --toggle-dark: var(--toggle-off)
 }
 
 html {
@@ -110,7 +104,7 @@ body {
     color: var(--text-color)
 }
 
-.content {
+.title {
     color: var(--primary-color);
 }
 
@@ -122,6 +116,32 @@ body {
 
     -webkit-transition: background-color 500ms ease; 
     transition: background-color 500ms ease; 
+}
+
+.mode-icon {
+    font-size: 9px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.fa-border {
+    border-radius: .2em;
+    border: .09em solid var(--text-color);
+
+    -webkit-transition: border-color 500ms ease; 
+    transition: border-color 500ms ease;
+}
+
+#light-toggle {
+    opacity: var(--toggle-light);
+    -webkit-transition: opacity 500ms ease; 
+    transition: opacity 500ms ease;
+}
+
+#dark-toggle {
+    opacity: var(--toggle-dark);
+    -webkit-transition: opacity 500ms ease; 
+    transition: opacity 500ms ease;
 }
 
 @media only screen and (max-width: 500px) {
