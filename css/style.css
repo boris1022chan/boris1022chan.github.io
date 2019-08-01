@@ -2,7 +2,9 @@
     --header-bg-dark: url("../images/sunset-fade-min.jpeg");
     --header-bg-light: url("../images/sunrise-min.jpg");
     --bg-color-dark: #010412;
+    --bg-color-dark-rgb: 1, 4, 18;
     --bg-color-light: #ffffff;
+    --bg-color-light-rgb: 255, 255, 255;
     --ft-color-dark: #121321;
     --ft-color-light: #F7F4EF;
     --text-color-dark: #AFAFAF;
@@ -15,6 +17,7 @@
     --color-mode: 'light';
     --header-bg: var(--header-bg-light);
     --bg-color: var(--bg-color-light);
+    --shadow-color-rgb: var(--bg-color-dark-rgb);
     --ft-color: var(--ft-color-light);
     --text-color: var(--text-color-light);
     --toggle-light: var(--toggle-off);
@@ -29,6 +32,7 @@
     :root:not([data-user-color-scheme]) {
         --header-bg: var(--header-bg-dark);
         --bg-color: var(--bg-color-dark);
+         --shadow-color-rgb: var(--bg-color-light-rgb);
         --ft-color: var(--ft-color-dark);
         --text-color: var(--text-color-dark);
         --toggle-light: var(--toggle-on);
@@ -39,6 +43,7 @@
 [data-user-color-scheme='dark'] {
     --header-bg: var(--header-bg-dark);
     --bg-color: var(--bg-color-dark);
+    --shadow-color-rgb: var(--bg-color-light-rgb);
     --ft-color: var(--ft-color-dark);
     --text-color: var(--text-color-dark);
     --toggle-light: var(--toggle-on);
@@ -146,7 +151,40 @@ body {
     padding-top: 8px;
 }
 
+.card {
+    background-color: var(--ft-color);
 
+    -webkit-transition: background-color 500ms ease; 
+    transition: background-color 500ms ease; 
+}
+
+.card-image {
+    height: 60%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card-content {
+    padding: 12px 24px !important;
+}
+
+.card-subtitle {
+    opacity: 0.6;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(var(--shadow-color-rgb),0.25), 0 5px 5px rgba(var(--shadow-color-rgb),0.22);
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.02);
+    -ms-transition: all 200ms ease-is;
+    -ms-transform: scale(1.02);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.02);
+    transition: all 200ms ease-in;
+    transform: scale(1.02);
+}
 
 #footer {
     width: 100%;
