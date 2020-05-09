@@ -1,6 +1,6 @@
 :root {
-    --header-bg-dark: url("../images/sunset-fade-min.jpeg");
-    --header-bg-light: url("../images/sunrise-min.jpg");
+    --header-bg-dark: url("../images/sunset-fade-min.png");
+    --header-bg-light: url("../images/sunrise-min.png");
     --bg-color-dark: #010412;
     --bg-color-dark-rgb: 1, 4, 18;
     --bg-color-light: #ffffff;
