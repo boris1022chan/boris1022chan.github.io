@@ -1,222 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="theme-8008">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=11" />
-    <meta name="author" content="John Doe">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="author" content="Boris Chan">
+	<meta name="description" content="Boris' personal website">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- styling -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="aos/aos.css">
-    <!-- script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+		integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+		crossorigin="anonymous" />
+	<link rel="stylesheet" type="text/css" href="css/theme.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
 
-    <link rel="icon" href="images/tab_icon.png">
-    <title>Boris Chan</title>
+	<title>Boris Chan</title>
 </head>
 
 <body>
-    <section id="header">
-        <div class="header-bar">
-            <img src="images/logo.png" id="name-logo">
-            <ul id="nav-list" class="mobile-hidden">
-                <li><a href="#about">About</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </section>
+	<header>
+		<div>
+			<h1 class="header-title">Boris Chan</h1>
+			<h1 class="header-subtitle">Software Engineer</h1>
+		</div>
+		<div class="dark-mode-toggle-wrapper">
+			<i class="fas fa-sun"></i>
+			<label class="switch">
+				<input id="dark-mode-toggle" type="checkbox" onclick="toggleTheme()">
+				<span class="slider round"></span>
+			</label>
+			<i class="fas fa-moon"></i>
+		</div>
+	</header>
 
-    <section id="about" class="container">
-        <h5 class="title">“Less is more”</h5>
-        <p>
-            Hi, I am Boris. I am currently a forth-year computer scienctist at the University of Waterloo.
-            With five interships experience, I have accumulated a breath of knowledge.
-            I am also a minimalist that strived for clean and readable code. 
-            I believe that new technologies and automations will greatly improve our quality of life.
-            I am actively looking for new opportunities to grow. Reach out to connect!
-        </p>
-    </section>
+	<section>
+		<p>I am currently a computer science undergrad at the University of Waterloo. As a minimalist, I strived for clean and
+			readable code. I also believe that new technologies and automation will greatly improve our quality of life.</p>
+		<p>With six internships experience, I have accumulated a breadth of knowledge in different areas. Previously a
+			software engineer intern at Bloomberg where I designed and built a search tool for the team.</p>
+		<div class="contact">
+			<p>Reach out to connect!</p>
+			<ul class="contact-list">
+				<li class="contact-item">
+					<a href="mailto:boris1022chan@hotmail.com"><i class="fas fa-envelope"></i></a>
+				</li>
+				<li class="contact-item">
+					<a href="https://www.facebook.com/borboristo/"><i class="fab fa-facebook-square"></i>
+				</li>
+				<li class="contact-item">
+					<a href="https://twitter.com/boris1022chan"><i class="fab fa-twitter-square"></i></a>
+				</li>
+				<li class="contact-item">
+					<a href="https://www.linkedin.com/in/boris1022chan/"><i class="fab fa-linkedin"></i></a>
+				</li>
+				<li class="contact-item">
+					<a href="https://github.com/boris1022chan"><i class="fab fa-github-square"></i></a>
+				</li>
+			</ul>
+		</div>
+	</section>
 
-    <section id="work" class="container">
-        <div class="row">
-            <h3 class="title">Work</h3>
-        </div>
+	<section>
+		<h2 class="section-header">Experience</h2>
+		<ul class="work-list timeline">
+			<li class="timeline-item">
+				<div>
+					<p class="work-date">Sep 2020 - Dec 2020</p>
+					<p>Software Engineer Intern @ <span class="company-name">Bloomberg</span class="company-name"></p>
+				</div>
+			</li>
+			<li class="timeline-item">
+				<div>
+					<p class="work-date">Jan 2020 - Apr 2020</p>
+					<p>Software Engineer Intern @ <span class="company-name">Flexport</span class="company-name"></p>
+				</div>
+			</li>
+			<li class="timeline-item">
+				<div>
+					<p class="work-date">May 2019 - Aug 2019</p>
+					<p>Software Developer Intern @ <span class="company-name">Genesys</span class="company-name"></p>
+				</div>
+			</li>
+			<li class="timeline-item">
+				<div>
+					<p class="work-date">Sep 2018 - Dec 2018</p>
+					<p>Software Developer Coop @ <span class="company-name">BBM</span class="company-name"></p>
+				</div>
+			</li>
+			<li class="timeline-item">
+				<div>
+					<p class="work-date">Jan 2018 - Apr 2018</p>
+					<p>Web UI Developer @ <span class="company-name">Genesys</span class="company-name"></p>
+				</div>
+			</li>
+			<li class="timeline-item">
+				<div>
+					<p class="work-date">Jun 2017 - Aug 2017</p>
+					<p>QA and QC Developer @ <span class="company-name">ACTO</span class="company-name"></p>
+				</div>
+			</li>
+			<li class="timeline-item">
+				<div>
+					<p class="work-date">Nov 2015 - Aug 2016</p>
+					<p>Lifeguard and Swim Instructor @ <span class="company-name">Town of Richmond Hill</span
+							class="company-name"></p>
+				</div>
+			</li>
+		</ul>
+	</section>
 
-        <div class="job-card">
-            <div class="row no-margin">
-                <div class="col" data-aos="zoom-in">
-                    <img src="images/company-logo/flexport_logo.png" class="company-logo">
-                </div>
-                <div class="job-description" data-aos="fade-left">
-                    <h6 class="job-role no-margin"> Software Engineer Intern</h6>
-                    <p class="job-detail no-margin">Flexport ・ San Francisco, CA ・ Jan 2020-Apr 2020
-                    </p>
-                </div>
-            </div>
-        </div>
+	<section>
+		<h2 class="section-header">Projects</h2>
+		<ul class="project-list">
+			<li>
+				<div>
+					<p>The Bor Bot</p>
+					<p class="project-description">A personal telegram bot that notifies weather and todo tasks.</p>
+					<ul class="project-tech">
+						<li>Telegram</li>
+						<li>AWS (Lambda)</li>
+						<li>Serverless</li>
+						<li>Node.js</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>PureRide</p>
+					<p class="project-description">A ride-sharing app build for Genesys' lunch gatherings and events.</p>
+					<ul class="project-tech">
+						<li>Flutter</li>
+						<li>GCP </li>
+						<li>Dart</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>Genscribe</p>
+					<p class="project-description">A web service to transcribe meetings into text and summarize key topics.</p>
+					<ul class="project-tech">
+						<li>IBM Watson</li>
+						<li>AWS (EBS)</li>
+						<li>NLP</li>
+						<li>Node.js</li>
+						<li>Express</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>Matching Animal Sound</p>
+					<p class="project-description">A matching game for babies to learn animals in various ecosystems.</p>
+					<ul class="project-tech">
+						<li>C#</li>
+						<li>Visual Studio</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</section>
 
-        <div class="job-card">
-            <div class="row no-margin">
-                <div class="col" data-aos="zoom-in">
-                    <img src="images/company-logo/genesys_logo.png" class="company-logo">
-                </div>
-                <div class="job-description" data-aos="fade-left">
-                    <h6 class="job-role no-margin">Software Developer Intern</h6>
-                    <p class="job-detail no-margin">Genesys Laboratories Canada Inc. ・ Markham, ON ・ May 2019-Aug 2019
-                    </p>
-                </div>
-            </div>
-        </div>
+	<footer>
+		<p>&#169; 2021 Boris Chan</p>
+	</footer>
 
-        <div class="job-card">
-            <div class="row no-margin">
-                <div class="col" data-aos="zoom-in">
-                    <img src="images/company-logo/bbm_logo.png" class="company-logo">
-                </div>
-                <div class="job-description" data-aos="fade-left">
-                    <h6 class="job-role no-margin">Software Developer Coop</h6>
-                    <p class="job-detail no-margin">CMW Social Networking Ltd. ・ Mississauga, ON ・ Sep 2018-Dec 2018</p>
-                </div>
-            </div>
-        </div>
+	<script>
+		function setTheme(themeName) {
+			document.documentElement.className = themeName;
+			if (themeName === "theme-8008") {
+				document.getElementById("dark-mode-toggle").checked = true;
+			} else {
+				document.getElementById("dark-mode-toggle").checked = false;
+			}
+		}
 
-        <div class="job-card">
-            <div class="row no-margin">
-                <div class="col" data-aos="zoom-in">
-                    <img src="images/company-logo/genesys_logo.png" class="company-logo">
-                </div>
-                <div class="job-description" data-aos="fade-left">
-                    <h6 class="job-role no-margin">Web UI Developer</h6>
-                    <p class="job-detail no-margin">Genesys Laboratories Canada Inc. ・ Markham, ON ・ Jan 2018-Apr 2018
-                    </p>
-                </div>
-            </div>
-        </div>
+		function toggleTheme() {
+			if (document.getElementById("dark-mode-toggle").checked) {
+				localStorage.setItem("theme", "theme-8008");
+				setTheme("theme-8008");
+			} else {
+				localStorage.setItem("theme", "theme-9009");
+				setTheme("theme-9009");
+			}
+		}
 
-        <div class="job-card-last">
-            <div class="row no-margin">
-                <div class="col" data-aos="zoom-in">
-                    <img src="images/company-logo/acto_logo.png" class="company-logo">
-                </div>
-                <div class="job-description" data-aos="fade-left">
-                    <h6 class="job-role no-margin">Quality Assurance / Quality Control Developer</h6>
-                    <p class="job-detail no-margin">Action Pack Media Inc. ・ Toronto, ON ・ Jun 2017-Sep 2017</p>
-                </div>
-            </div>
-        </div>
+		(function () {
+			// detect JS enabled, allow user to toggle dark mode
+			document.getElementsByClassName("dark-mode-toggle-wrapper")[0].style.display = "flex";
+			// Previously user stored theme
+			const userTheme = localStorage.getItem("theme")
+			if (userTheme) {
+				setTheme(userTheme);
+				return;
+			}
+			// First time visited theme based on system setting
+			if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+				setTheme("theme-8008");
+			} else {
+				setTheme("theme-9009");
+			}
+		})();
 
-    </section>
-
-    <section id="projects" class="container">
-        <div class="row">
-            <h3 class="title">Projects</h3>
-        </div>
-
-        <div class="row">
-            <div class="col m5 push-m1 s10 push-s1">
-                <div class="card small" data-aos="zoom-in">
-                    <div class="card-image waves-effect waves-block waves-light"
-                        style="background-image:url(images/project-thumbnails/pureride.jpg)"></div>
-                    <div class="card-content">
-                        <span class="card-title ">PureRide</span>
-                        <p class="no-margin card-subtitle">Flutter</p>
-                        <p class="no-margin card-subtitle">
-                            <a href="https://github.com/boris1022chan/Pureride" target="_blank">
-                                View Source <i class="fas fa-code-branch"></i>
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col m5 push-m1 s10 push-s1">
-                <div class="card small" data-aos="zoom-in">
-                    <div class="card-image waves-effect waves-block waves-light"
-                        style="background-image:url(images/project-thumbnails/music_downloader.png)">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title">Music Downloader</span>
-                        <p class="no-margin card-subtitle">Android, Kotlin</p>
-                        <p class="no-margin card-subtitle">
-                            <a href="https://github.com/boris1022chan/Music-Downloader" target="_blank">
-                                View Source <i class="fas fa-code-branch"></i>
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col m5 push-m1 s10 push-s1">
-                <div class="card small" data-aos="zoom-in">
-                    <div class="card-image waves-effect waves-block waves-light"
-                        style="background-image:url(images/project-thumbnails/genscribe.png)">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title ">Genscirbe</span>
-                        <p class="no-margin card-subtitle">Javascript, Python</p>
-                        <p class="no-margin card-subtitle">
-                            <a href="https://github.com/boris1022chan/Genscribe" target="_blank">
-                                View Source <i class="fas fa-code-branch"></i>
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col m5 push-m1 s10 push-s1 mobile-hidden">
-                <div class="card small" data-aos="zoom-in">
-                    <div class="card-image waves-effect waves-block waves-light"
-                        style="background-image:url(images/project-thumbnails/quadris.png)"></div>
-                    <div class="card-content">
-                        <span class="card-title ">Quadris</span>
-                        <p class="no-margin card-subtitle">C++</p>
-                        <p class="no-margin card-subtitle">
-                            <a target="_blank">
-                                Private Source <i class="fas fa-code-branch"></i>
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-    </section>
-
-    <section id="contact" class="container">
-        <div class="row">
-            <h3 class="title">Contact</h3>
-        </div>
-        <div class="row">
-            <ul class="col s12 social_media_links">
-                <li><a href="https://www.linkedin.com/in/boris1022chan/">LinkedIn</a></li>
-                <li><a href="https://github.com/boris1022chan">Github</a></li>
-                <li>Email: <a href="mailto:boris1022chan@gmail.com" target="_top">boris1022chan@gmail.com</a></li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="footer">
-        <div class="container">
-            <div class="row">
-                <h6 class="title">Site Theme</h6>
-                <div>
-                    <span class="mode-icon"><i class="far fa-sun fa-2x fa-border" id="light-toggle"></i></span>
-                    <span class="mode-icon"><i class="far fa-moon fa-2x fa-border" id="dark-toggle"></i></span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script src="./javascript/index.js"></script>
-    <script src="aos/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+			// Previously user stored theme
+			const userTheme = localStorage.getItem("theme")
+			if (userTheme) return;
+			// Change based on system theme
+			if (e.matches) {
+				setTheme("theme-8008");
+			} else {
+				setTheme("theme-9009");
+			}
+		});
+	</script>
 </body>
 
 </html>
